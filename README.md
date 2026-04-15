@@ -172,6 +172,7 @@ On real vintage hardware,  each training step takes several seconds and full tra
 The `validate.py` script is a Python/NumPy reference implementation of the exact same transformer.  It trains on the same task with the same architecture and confirms convergence to 100% accuracy.
 
 ```
+pip install numpy
 python3 validate.py
 ```
 
