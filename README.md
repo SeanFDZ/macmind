@@ -168,7 +168,7 @@ python3 validate.py
 - **[Vaswani et al. (2017)](https://arxiv.org/abs/1706.03762)** -- "Attention Is All You Need": the transformer architecture this model implements
 - **[Cooley & Tukey (1965)](https://en.wikipedia.org/wiki/Cooley%E2%80%93Tukey_FFT_algorithm)** -- the Fast Fourier Transform algorithm whose bit-reversal permutation is the training task
 
-MacMind is an original implementation by [Falling Data Zone LLC](https://fallingdata.zone).
+MacMind is an original implementation by [Sean Lavigne](https://fallingdata.zone).
 
 ---
 
