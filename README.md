@@ -163,10 +163,10 @@ python3 validate.py
 
 ## Credits
 
-- **Frank Rosenblatt (1958)** -- the Perceptron: first demonstration that a machine can learn from examples by adjusting weights
-- **Paul Werbos (1974) / Rumelhart,  Hinton & Williams (1986)** -- backpropagation: the training algorithm this project implements
-- **Vaswani et al. (2017)** -- "Attention Is All You Need": the transformer architecture this model implements
-- **Cooley & Tukey (1965)** -- the Fast Fourier Transform algorithm whose bit-reversal permutation is the training task
+- **[Frank Rosenblatt (1958)](https://en.wikipedia.org/wiki/Perceptron)** -- the Perceptron: first demonstration that a machine can learn from examples by adjusting weights
+- **[Paul Werbos (1974) / Rumelhart,  Hinton & Williams (1986)](https://en.wikipedia.org/wiki/Backpropagation)** -- backpropagation: the training algorithm this project implements
+- **[Vaswani et al. (2017)](https://arxiv.org/abs/1706.03762)** -- "Attention Is All You Need": the transformer architecture this model implements
+- **[Cooley & Tukey (1965)](https://en.wikipedia.org/wiki/Cooley%E2%80%93Tukey_FFT_algorithm)** -- the Fast Fourier Transform algorithm whose bit-reversal permutation is the training task
 
 MacMind is an original implementation by [Falling Data Zone LLC](https://fallingdata.zone).
 
