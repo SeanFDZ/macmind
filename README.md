@@ -149,7 +149,7 @@ The model was left training overnight,  grinding through backpropagation one 8 M
 1. Download `MacMind-Blank.dsk` from [Releases](https://github.com/SeanFDZ/macmind/releases)
 2. Open it in your emulator
 3. Navigate to Card 2 (Training)
-4. Click **Train to 100%** and watch the model converge
+4. Click **Train 10** for short runs,  or **Train to 100%** to train until the model gets a perfect score on a sample.  For a longer run,  open the Message Box (Cmd-M) and type `trainN 1000` to train for 1,000 steps straight.  The model picks up where it left off each time.
 
 ### Validate the Math (Python)
 
