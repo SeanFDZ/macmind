@@ -1,6 +1,6 @@
 # MacMind
 
-**A complete transformer neural network implemented entirely in HyperTalk,  trained on a Macintosh SE.**
+**A complete transformer neural network implemented entirely in HyperTalk,  trained on a Macintosh SE/30.**
 
 MacMind is a 1,216-parameter single-layer single-head transformer that learns the bit-reversal permutation -- the opening step of the Fast Fourier Transform -- from random examples.  Every line of the neural network is written in HyperTalk,  a scripting language from 1987 designed for making interactive card stacks,  not matrix math.  It has token embeddings,  positional encoding,  self-attention with scaled dot-product scores,  cross-entropy loss,  full backpropagation,  and stochastic gradient descent.  No compiled code.  No external libraries.  No black boxes.
 
@@ -129,7 +129,7 @@ All weights and activations are stored as comma-delimited numbers in hidden Hype
 
 ## Training on Real Hardware
 
-MacMind was trained on a Macintosh SE running System 7.6.1 and has also been tested through Basilisk II on Apple Silicon.  HyperTalk is interpreted,  and every multiply,  every field access,  every variable lookup goes through the interpreter.  Each training step takes several seconds.  Training to convergence (~1,000 steps) takes hours.
+MacMind was trained on a Macintosh SE/30 running System 7.6.1 and has also been tested through Basilisk II on Apple Silicon.  HyperTalk is interpreted,  and every multiply,  every field access,  every variable lookup goes through the interpreter.  Each training step takes several seconds.  Training to convergence (~1,000 steps) takes hours.
 
 The model was left training overnight,  grinding through backpropagation one 8 MHz multiply-accumulate at a time.  By morning it had learned the permutation.
 
@@ -139,12 +139,12 @@ The model was left training overnight,  grinding through backpropagation one 8 M
 
 **HyperCard 2.0 or later** is required.  HyperCard 1.x evaluates arithmetic left-to-right without standard precedence (`2 + 3 * 4 = 20` instead of `14`),  which would silently corrupt every matrix multiplication and gradient computation in the model.  HyperCard 2.0 introduced standard mathematical operator precedence.  The stack was built and tested with HyperCard 2.1.
 
-| | Minimum | Tested |
+| | HyperCard 2.1 Minimum | MacMind Reference |
 |---|---|---|
 | **HyperCard** | 2.0 | 2.1 |
-| **System software** | System 7 | System 7.6.1 |
-| **RAM** | 2 MB (4 MB recommended) | 4 MB |
-| **Processor** | 68020 or later | 68000 (Mac SE) |
+| **System software** | System 6.0.5 | System 7.6.1 |
+| **RAM** | 1 MB (2 MB recommended) | 4 MB |
+| **Processor** | 68000 | 68030 (Mac SE/30) |
 | **Also runs on** | Mac OS 8,  Mac OS 9,  Mac OS X Classic Environment (through 10.4 Tiger on PowerPC) | |
 
 On real vintage hardware,  each training step takes several seconds and full training takes hours.  On a modern Mac running Basilisk II or SheepShaver,  performance is comparable -- HyperTalk interpretation is the bottleneck,  not the host CPU.
