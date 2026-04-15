@@ -135,6 +135,22 @@ The model was left training overnight,  grinding through backpropagation one 8 M
 
 ---
 
+## Requirements
+
+**HyperCard 2.0 or later** is required.  HyperCard 1.x evaluates arithmetic left-to-right without standard precedence (`2 + 3 * 4 = 20` instead of `14`),  which would silently corrupt every matrix multiplication and gradient computation in the model.  HyperCard 2.0 introduced standard mathematical operator precedence.  The stack was built and tested with HyperCard 2.1.
+
+| | Minimum | Tested |
+|---|---|---|
+| **HyperCard** | 2.0 | 2.1 |
+| **System software** | System 7 | System 7.6.1 |
+| **RAM** | 2 MB (4 MB recommended) | 4 MB |
+| **Processor** | 68020 or later | 68000 (Mac SE) |
+| **Also runs on** | Mac OS 8,  Mac OS 9,  Mac OS X Classic Environment (through 10.4 Tiger on PowerPC) | |
+
+On real vintage hardware,  each training step takes several seconds and full training takes hours.  On a modern Mac running Basilisk II or SheepShaver,  performance is comparable -- HyperTalk interpretation is the bottleneck,  not the host CPU.
+
+---
+
 ## Running It Yourself
 
 ### Quick Start (pre-trained)
