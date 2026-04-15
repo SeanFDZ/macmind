@@ -80,6 +80,13 @@ For example,  input `[3, 7, 1, 9, 5, 2, 8, 4]` should produce `[3, 5, 1, 8, 7, 2
 
 The 8x8 grid visualizes which input positions the model attends to when producing each output position.  After training,  you should see the butterfly pattern: positions 0, 2, 5, 7 attend to themselves (fixed points of the permutation),  while positions 1 and 4 attend to each other,  and positions 3 and 6 attend to each other (swap pairs).
 
+This is the same routing structure discovered by Cooley and Tukey in 1965 for the Fast Fourier Transform:
+
+![FFT Butterfly Diagram](https://upload.wikimedia.org/wikipedia/commons/9/98/Butterfly-FFT.png)
+*The classic FFT butterfly diagram ([public domain](https://en.wikipedia.org/wiki/Butterfly_diagram)).  The model discovers this structure independently through attention.*
+
+<!-- TODO: Screenshot of Card 4 (Attention Map) after training, showing the butterfly pattern -->
+
 ---
 
 ## Architecture
