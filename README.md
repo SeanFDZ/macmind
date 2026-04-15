@@ -57,7 +57,9 @@ MacMind is a 5-card HyperCard stack:
 
 ### Training (Card 2)
 
-Click **Train 10** for 10 training steps,  or **Train to 100%** to train until convergence.  Each step generates a random 8-digit sequence,  runs the full forward pass,  computes cross-entropy loss,  backpropagates gradients through every layer,  and updates all 1,216 weights.  Progress bars,  per-position accuracy,  and a training log update in real time.
+Click **Train 10** for 10 training steps,  or **Train to 100%** to train until the model gets a perfect score on a sample.  For deeper training,  run **Train 10** repeatedly or click **Train to 100%** again -- the model picks up where it left off.  For a longer run,  open the Message Box (Cmd-M) and type `trainN 1000` to train for 1,000 steps straight.
+
+Each step generates a random 8-digit sequence,  runs the full forward pass,  computes cross-entropy loss,  backpropagates gradients through every layer,  and updates all 1,216 weights.  Progress bars,  per-position accuracy,  and a training log update in real time.
 
 ### Inference (Card 3)
 
