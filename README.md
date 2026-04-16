@@ -164,14 +164,14 @@ On real vintage hardware,  each training step takes several seconds and full tra
 ### Quick Start (pre-trained)
 
 1. Download `MacMind-Trained.img` from [Releases](https://github.com/SeanFDZ/macmind/releases)
-2. Open it in SheepShaver,  Basilisk II,  or Mini vMac running System 7.x through Mac OS 9
+2. Open it on your Mac running System 7 through Mac OS 9,  or in an emulator (Basilisk II,  SheepShaver,  Mini vMac)
 3. Double-click the MacMind stack
 4. Navigate to Card 3 (Inference),  click **New Random**,  then **Permute**
 
 ### Watch It Learn (blank stack)
 
 1. Download `MacMind-Blank.img` from [Releases](https://github.com/SeanFDZ/macmind/releases)
-2. Open it in your emulator
+2. Open it on your Mac or in an emulator
 3. Navigate to Card 2 (Training)
 4. Click **Train 10** for short runs,  or **Train to 100%** to train until the model gets a perfect score on a sample.  For a longer run,  open the Message Box (Cmd-M) and type `trainN 1000` to train for 1,000 steps straight.  The model picks up where it left off each time.
 
