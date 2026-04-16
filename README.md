@@ -150,7 +150,7 @@ The model was left training overnight,  grinding through backpropagation one 8 M
 | | HyperCard 2.1 Minimum | MacMind Reference |
 |---|---|---|
 | **HyperCard** | 2.0 | 2.1 |
-| **System software** | System 6.0.5 | System 7.6.1 |
+| **System software** | System 7 | System 7.6.1 |
 | **RAM** | 1 MB (2 MB recommended) | 4 MB |
 | **Processor** | 68000 | 68030 (Mac SE/30) |
 | **Also runs on** | Mac OS 8,  Mac OS 9,  Mac OS X Classic Environment (through 10.4 Tiger on PowerPC) | |
