@@ -197,6 +197,14 @@ MacMind is an original implementation by [Sean Lavigne](https://fallingdata.zone
 
 ---
 
+## Also From Falling Data Zone
+
+**[AgentBridge](https://github.com/SeanFDZ/agentbridge)** -- let AI agents talk to your Classic Mac.  A native System 7 / Mac OS 8 / Mac OS 9 application that connects Claude and other AI agents to Classic Mac OS through a simple text-based protocol.  Works on real hardware and emulators.
+
+More apps at [apps.fallingdata.zone](https://apps.fallingdata.zone).
+
+---
+
 ## License
 
 MIT.  See [LICENSE](LICENSE).
