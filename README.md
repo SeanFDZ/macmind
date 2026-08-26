@@ -109,6 +109,8 @@ This is the same routing structure discovered by Cooley and Tukey in 1965 for th
 | Output projection (W_out) | 16 x 10 | 160 |
 | **Total** | | **1,216** |
 
+There is no feed-forward block and no layer norm.  At this scale,  attention and a residual are enough.
+
 Data flow:
 
 ```
