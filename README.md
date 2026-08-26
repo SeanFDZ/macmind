@@ -14,7 +14,7 @@ Option-click any button and read the actual math.
 
 The same fundamental process that trained MacMind -- forward pass,  loss computation,  backward pass,  weight update,  repeat -- is what trained every large language model that exists today.  The difference is scale,  not kind.  MacMind has 1,216 parameters.  GPT-4 has roughly a trillion.  The math is identical.
 
-We are at a moment where AI affects nearly everyone but almost nobody understands what it actually does.  MacMind is a demonstration that the process is knowable -- that backpropagation and attention are not magic,  they are math,  and that math does not care whether it is running on a TPU cluster or a 68000 processor from 1987.
+We are at a moment where AI affects nearly everyone but almost nobody understands what it actually does.  MacMind is a demonstration that the process is knowable -- that backpropagation and attention are not magic,  they are math,  and that math does not care whether it is running on a TPU cluster or a 68030 from 1989.
 
 Everything is inspectable.  Everything is modifiable.  Change the learning rate,  swap the training task,  resize the model -- all from within HyperCard's script editor.  This is the engine with the hood up.
 
@@ -139,7 +139,7 @@ All weights and activations are stored as comma-delimited numbers in hidden Hype
 
 MacMind was trained on a Macintosh SE/30 running System 7.6.1 and has also been tested through Basilisk II on Apple Silicon.  HyperTalk is interpreted,  and every multiply,  every field access,  every variable lookup goes through the interpreter.  Each training step takes several seconds.  Training to convergence (~1,000 steps) takes hours.
 
-The model was left training overnight,  grinding through backpropagation one 8 MHz multiply-accumulate at a time.  By morning it had learned the permutation.
+The model was left training overnight,  grinding through backpropagation one 16 MHz multiply-accumulate at a time.  By morning it had learned the permutation.
 
 ---
 
