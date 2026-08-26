@@ -1,8 +1,8 @@
 # MacMind
 
-**A complete transformer neural network implemented entirely in HyperTalk,  trained on a Macintosh SE/30.**
+**A transformer neural network implemented entirely in HyperTalk,  trained on a Macintosh SE/30.**
 
-MacMind is a 1,216-parameter single-layer single-head transformer that learns the bit-reversal permutation -- the opening step of the Fast Fourier Transform -- from random examples.  Every line of the neural network is written in HyperTalk,  a scripting language from 1987 designed for making interactive card stacks,  not matrix math.  It has token embeddings,  positional encoding,  self-attention with scaled dot-product scores,  cross-entropy loss,  full backpropagation,  and stochastic gradient descent.  No compiled code.  No external libraries.  No black boxes.
+MacMind is a 1,216-parameter single-layer single-head transformer that learns the bit-reversal permutation, the opening step of the Fast Fourier Transform, from random examples.  Every line of the neural network is written in HyperTalk,  a scripting language from 1987 designed for making interactive card stacks,  not matrix math.  It has token embeddings,  positional encoding,  self-attention with scaled dot-product scores,  cross-entropy loss,  full backpropagation,  and stochastic gradient descent.  No compiled code.  No external libraries.  No black boxes.
 
 Option-click any button and read the actual math.
 
@@ -12,11 +12,11 @@ Option-click any button and read the actual math.
 
 ## Why This Exists
 
-The same fundamental process that trained MacMind -- forward pass,  loss computation,  backward pass,  weight update,  repeat -- is what trained every large language model that exists today.  The difference is scale,  not kind.  MacMind has 1,216 parameters.  GPT-4 has roughly a trillion.  The math is identical.
+The same fundamental process that trained MacMind, forward pass,  loss computation,  backward pass,  weight update,  repeat, is what trained every large language model that exists today.  The difference is scale,  not kind.  MacMind has 1,216 parameters.  GPT-4 has roughly a trillion.  The math is identical.
 
-We are at a moment where AI affects nearly everyone but almost nobody understands what it actually does.  MacMind is a demonstration that the process is knowable -- that backpropagation and attention are not magic,  they are math,  and that math does not care whether it is running on a TPU cluster or a 68030 from 1989.
+We are at a moment where AI affects nearly everyone but almost nobody understands what it actually does.  MacMind is a demonstration that the process is knowable, that backpropagation and attention are not magic,  they are math,  and that math does not care whether it is running on a TPU cluster or a 68030 from 1989.
 
-Everything is inspectable.  Everything is modifiable.  Change the learning rate,  swap the training task,  resize the model -- all from within HyperCard's script editor.  This is the engine with the hood up.
+Everything is inspectable.  Everything is modifiable.  Change the learning rate,  swap the training task,  resize the model, all from within HyperCard's script editor.  This is the engine with the hood up.
 
 ---
 
@@ -33,7 +33,7 @@ Maps to:     0    4    2    6    1    5    3    7
 
 So input `[3, 7, 1, 9, 5, 2, 8, 4]` becomes `[3, 5, 1, 8, 7, 2, 9, 4]`.
 
-This permutation is the first step of the Fast Fourier Transform,  one of the most important algorithms in computing.  The model is never told the rule.  It discovers the positional pattern purely through self-attention and gradient descent -- the same process,  scaled up enormously,  that taught larger models to understand language.
+This permutation is the first step of the Fast Fourier Transform,  one of the most important algorithms in computing.  The model is never told the rule.  It discovers the positional pattern purely through self-attention and gradient descent - the same process,  scaled up enormously,  that taught larger models to understand language.
 
 After training,  the attention map on Card 4 reveals the butterfly routing pattern of the FFT.  The model independently discovered the same mathematical structure that Cooley and Tukey published in 1965.
 
@@ -53,7 +53,7 @@ MacMind is a 5-card HyperCard stack:
 
 ### Training (Card 2)
 
-Click **Train 10** for 10 training steps,  or **Train to 100%** to train until the model gets a perfect score on a sample.  For deeper training,  run **Train 10** repeatedly or click **Train to 100%** again -- the model picks up where it left off.  For a longer run,  open the Message Box (Cmd-M) and type `trainN 1000` to train for 1,000 steps straight.
+Click **Train 10** for 10 training steps,  or **Train to 100%** to train until the model gets a perfect score on a sample.  For deeper training,  run **Train 10** repeatedly or click **Train to 100%** again, the model picks up where it left off.  For a longer run,  open the Message Box (Cmd-M) and type `trainN 1000` to train for 1,000 steps straight.
 
 Each step generates a random 8-digit sequence,  runs the full forward pass,  computes cross-entropy loss,  backpropagates gradients through every layer,  and updates all 1,216 weights.  Progress bars,  per-position accuracy,  and a training log update in real time.
 
@@ -155,7 +155,7 @@ The model was left training overnight,  grinding through backpropagation one 16 
 | **Processor** | 68000 | 68030 (Mac SE/30) |
 | **Also runs on** | Mac OS 8,  Mac OS 9,  Mac OS X Classic Environment (through 10.4 Tiger on PowerPC) | |
 
-On real vintage hardware,  each training step takes several seconds and full training takes hours.  On a modern Mac running Basilisk II or SheepShaver,  performance is comparable -- HyperTalk interpretation is the bottleneck,  not the host CPU.
+On real vintage hardware, each training step takes several seconds and full training takes hours.  On a modern Mac running Basilisk II or SheepShaver, performance is comparable, HyperTalk interpretation is the bottleneck, not the host CPU.
 
 ---
 
